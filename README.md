@@ -14,3 +14,16 @@ Add support for presense sensor in the heatpump
 
 Change code so it reads heatpump info from config instead of from code
 
+# Configuration
+add the files under hass directory /custom_components/climate/heatpumppu
+
+In hass configuration.yaml have something like:
+
+```
+climate:
+  - platform: heatpumppu
+    name: YK_ILP
+    topic: aircon/upstairs
+```
+
+Note that the heatpump.py is currently hardcoded to listen above topic!
